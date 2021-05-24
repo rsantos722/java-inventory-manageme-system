@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="424.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modifyPartController">
+   <children>
+      <Text layoutX="31.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part" wrappingWidth="154.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="13.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="13.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="13.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+      <Text layoutX="14.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <Text layoutX="14.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Text layoutX="195.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text fx:id="inHouseText" layoutX="14.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+      <Text fx:id="outsourcedText" layoutX="15.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" visible="false" />
+      <RadioButton fx:id="inHouseRadioButton" layoutX="162.0" layoutY="38.0" mnemonicParsing="false" onAction="#inHouseRadioButtonAction" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="partTypeToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedRadioButton" layoutX="289.0" layoutY="38.0" mnemonicParsing="false" onAction="#outsourcedRadioButtonAction" text="Outsourced" toggleGroup="$partTypeToggle" />
+      <TextField fx:id="idBox" disable="true" editable="false" layoutX="104.0" layoutY="91.0" />
+      <TextField fx:id="nameBox" layoutX="104.0" layoutY="138.0" />
+      <TextField fx:id="inventoryBox" layoutX="104.0" layoutY="181.0" />
+      <TextField fx:id="priceBox" layoutX="104.0" layoutY="228.0" />
+      <TextField fx:id="maxBox" layoutX="104.0" layoutY="270.0" />
+      <Text layoutX="289.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <TextField fx:id="minBox" layoutX="324.0" layoutY="270.0" />
+      <TextField fx:id="inHouseBox" layoutX="104.0" layoutY="315.0" />
+      <Button fx:id="saveButton" layoutX="19.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+      <Button fx:id="cancelButton" layoutX="82.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
+      <Text fx:id="companyNameText" layoutX="16.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" visible="false" />
+      <TextField fx:id="companyNameBox" layoutX="121.0" layoutY="315.0" visible="false" />
+   </children>
+</AnchorPane>

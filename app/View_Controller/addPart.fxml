@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addPartController">
+   <children>
+      <Text layoutX="25.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="inHouseRadioButton" layoutX="121.0" layoutY="30.0" mnemonicParsing="false" onAction="#inHouseRadioButtonAction" selected="true" text="In House">
+         <toggleGroup>
+            <ToggleGroup fx:id="partTypeToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedRadioButton" layoutX="207.0" layoutY="30.0" mnemonicParsing="false" onAction="#outsourcedRadioButtonAction" text="Outsourced" toggleGroup="$partTypeToggle" />
+      <Text layoutX="25.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <TextField disable="true" editable="false" layoutX="94.0" layoutY="81.0" promptText="Auto-Gen: Disabled" />
+      <Text layoutX="23.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="nameBox" layoutX="94.0" layoutY="124.0"/>
+      <Text layoutX="23.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+      <TextField fx:id="inventoryBox" layoutX="94.0" layoutY="170.0"/>
+      <Text layoutX="25.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost" />
+      <TextField fx:id="costBox" layoutX="94.0" layoutY="212.0"/>
+      <Text layoutX="27.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <TextField fx:id="maxBox" layoutX="94.0" layoutY="256.0"/>
+      <Text layoutX="268.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text fx:id="inhouseText" layoutX="29.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+      <TextField fx:id="minBox" layoutX="300.0" layoutY="256.0"/>
+      <Text fx:id="outsourcedText" layoutX="28.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" visible="false" />
+      <TextField fx:id="machineIdTextBox" layoutX="94.0" layoutY="300.0"/>
+      <Button fx:id="saveButton" layoutX="348.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+      <Button fx:id="cancelButton" layoutX="411.0" layoutY="350.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
+      <TextField fx:id="companyNameTextBox" layoutX="121.0" layoutY="300.0" visible="false" />
+   </children>
+</AnchorPane>
